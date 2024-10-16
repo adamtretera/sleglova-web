@@ -55,7 +55,7 @@ const ArticleList = () => {
                         alt={article.imgAlt}
                         className={"object-cover h-48 w-48 md:w-56 md:h-56 opacity-80 bg-blend-lighten"}
                     />
-                    <h4 className={"text-3xl text-secondary font-semibold"}>{article.title}</h4>
+                    <h4 className={"text-3xl text-secondary font-semibold md:min-h-[5rem]"}>{article.title}</h4>
                     {article.content.map((paragraph, i) => (
                         <div key={paragraph} className={"flex gap-2 w-full"}>
                             <MdCircle className={"text-sm flex-shrink-0 fill-primary"}/>

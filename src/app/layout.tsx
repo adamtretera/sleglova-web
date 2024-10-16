@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import {Forum, EB_Garamond} from 'next/font/google'
 import "./globals.css";
+import {AnimatePresence} from "framer-motion";
 
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({
         <body
             className={`${garamond.variable} ${forum.variable} font-mono`}
         >
+
         {children}
         </body>
         </html>

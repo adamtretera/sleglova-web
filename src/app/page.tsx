@@ -1,4 +1,8 @@
+"use client"
+
 import ArticleList from "@/app/articel-list";
+import {AnimatePresence, motion} from "framer-motion";
+
 import {
     MdAccessTime, MdCircle,
     MdLocalParking,
@@ -15,7 +19,13 @@ export default function Home() {
     return (
         <div className={"px-10 md:px-16"}>
             <header>
-                <nav className={"pt-10 sm:pt-5 flex justify-center md:justify-between mb-10 md:mb-2"}>
+                <motion.nav initial={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            transition={{
+                                duration: 0.25,
+                                delay: 0.1
+                            }}
+                            className={"pt-10 sm:pt-5 flex justify-center md:justify-between mb-10 md:mb-2"}>
                     <ul className={"flex gap-4  flex-col  md:flex-row text-xl "}>
                         <li className={"w-[12rem]"}>
                             <a className={"w-full uppercase justify-center flex  py-3 bg-primary rounded-lg text-white"}
@@ -33,13 +43,18 @@ export default function Home() {
                     <img src={"/images/logo.webp"} alt={"main"} width={200} height={200}
                          className={"max-w-full col-span-1 hidden md:block"}/>
 
-                </nav>
+                </motion.nav>
 
             </header>
 
-            <section className={"grid grid-cols-1 md:grid-cols-2 gap-4 "}>
+            <motion.section initial={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            transition={{
+                                duration: 0.25,
+                                delay: 0.2
+                            }} className={"grid grid-cols-1 md:grid-cols-2 gap-4 "}>
 
-                <div className={"flex flex-col col-span-1 gap-10 items-center sm:px-16"}>
+                <div className={"flex flex-col col-span-1 gap-10 items-center  sm:px-16"}>
                     <h1 className={"text-4xl sm:text-5xl font-sans text-center"}>
                         <div>
                             Notářská kancelář
@@ -69,81 +84,84 @@ export default function Home() {
                          className={"max-w-full col-span-1 "}/>
                 </div>
                 <img src={"/images/main.webp"} alt={"main"} className={"max-w-full col-span-1"}/>
-            </section>
+            </motion.section>
 
+            <AnimatePresence>
+                <motion.section initial={{opacity: 0}}
+                                animate={{opacity: 1}}
+                                className={"py-10 sm:py-16"}>
+                    <div className={"flex justify-center"}>
+                        <h2 className={"py-4 bg-primary font-semibold rounded-lg text-2xl sm:text-4xl text-white uppercase w-60 sm:w-72 flex items-center justify-center sm:mt-5"}>O
+                            nás</h2>
+                    </div>
 
-            <section className={"py-10 sm:py-16"}>
-                <div className={"flex justify-center"}>
-                    <h2 className={"py-4 bg-primary font-semibold rounded-lg text-2xl sm:text-4xl text-white uppercase w-60 sm:w-72 flex items-center justify-center sm:mt-5"}>O
-                        nás</h2>
-                </div>
+                    <div className={"grid grid-cols-1 sm:grid-cols-10 gap-4 md:py-5"}>
 
-                <div className={"grid grid-cols-1 sm:grid-cols-10 gap-4 md:py-5"}>
+                        <article className={"md:flex items-center py-5 sm:gap-10 col-span-10 sm:col-span-6 "}>
+                            <img src={"/images/headshot.webp"} width={180}/>
+                            <div>
+                                <h3 className={"underline text-2xl md:text-3xl font-semibold pt-5"}>
+                                    JUDr. Kateřina Šleglová, notářka
+                                </h3>
+                                <p className={"text-2xl pt-4 tracking-wide text-secondary"}>
+                                    JUDr. Kateřina Šleglová vystudovala Právnickou fakultu
+                                    Univerzity Karlovy v Praze. Notářskou praxi zahájila v
+                                    roce 2016. Většinu této praxe absolvovala v kanceláři
+                                    JUDr. Jana Stránského, notáře v Plzni. Notářkou byla
+                                    jmenovaná v roce 2024 a je členkou Notářské komory v
+                                    Plzni. Působí jako soudní komisařka v řízeních o
+                                    pozůstalosti v obvodu Okresního soudu Plzeň-jih.
+                                </p>
+                            </div>
 
-                    <article className={"md:flex items-center py-5 sm:gap-10 col-span-10 sm:col-span-6 "}>
-                        <img src={"/images/headshot.webp"} width={180}/>
-                        <div>
-                            <h3 className={"underline text-2xl md:text-3xl font-semibold pt-5"}>
-                                JUDr. Kateřina Šleglová, notářka
-                            </h3>
-                            <p className={"text-2xl pt-4 tracking-wide text-secondary"}>
-                                JUDr. Kateřina Šleglová vystudovala Právnickou fakultu
-                                Univerzity Karlovy v Praze. Notářskou praxi zahájila v
-                                roce 2016. Většinu této praxe absolvovala v kanceláři
-                                JUDr. Jana Stránského, notáře v Plzni. Notářkou byla
-                                jmenovaná v roce 2024 a je členkou Notářské komory v
-                                Plzni. Působí jako soudní komisařka v řízeních o
-                                pozůstalosti v obvodu Okresního soudu Plzeň-jih.
-                            </p>
-                        </div>
-
-                    </article>
-
-                    <section
-                        className={"col-span-10 sm:col-span-4 flex flex-col justify-between py-5 gap-10 sm:min-h-[30vh] items-center"}>
-                        <article className={"text-center"}>
-                            <h4 className={"text-xl md:text-2xl font-semibold flex gap-2 sm:pb-3 items-center"}>
-                                <MdCircle className={"text-2xl fill-primary"}/>
-                                Mgr. Bc. et Bc. Veronika Durasová
-                            </h4>
-                            <p className={"text-lg md:text-2xl text-secondary"}>
-                                - notářská kandidátka a zástupkyně notářky
-                            </p>
-                            <p className={"text-lg md:text-2xl text-secondary"}>
-                                - v notářské praxi působí od roku 2016
-                            </p>
                         </article>
 
-                        <article className={"text-center"}>
+                        <section
+                            className={"col-span-10 sm:col-span-4 flex flex-col justify-between py-5 gap-10 sm:min-h-[30vh] items-center"}>
+                            <article className={"text-center"}>
+                                <h4 className={"text-xl md:text-2xl font-semibold flex gap-2 sm:pb-3 items-center"}>
+                                    <MdCircle className={"text-2xl fill-primary"}/>
+                                    Mgr. Bc. et Bc. Veronika Durasová
+                                </h4>
+                                <p className={"text-lg md:text-2xl text-secondary"}>
+                                    - notářská kandidátka a zástupkyně notářky
+                                </p>
+                                <p className={"text-lg md:text-2xl text-secondary"}>
+                                    - v notářské praxi působí od roku 2016
+                                </p>
+                            </article>
 
-                            <h4 className={"text-xl md:text-2xl font-semibold flex gap-2 sm:pb-3 items-center"}>
-                                <MdCircle className={"text-2xl fill-primary"}/>
-                                Mgr. Bc. et Bc. Veronika Durasová
-                            </h4>
-                            <p className={"text-lg md:text-2xl text-secondary"}>
-                                - notářská kandidátka a zástupkyně notářky
-                            </p>
-                            <p className={"text-lg md:text-2xl text-secondary"}>
-                                - v notářské praxi působí od roku 2016
-                            </p>
-                        </article>
-                    </section>
+                            <article className={"text-center"}>
 
-                </div>
+                                <h4 className={"text-xl md:text-2xl font-semibold flex gap-2 sm:pb-3 items-center"}>
+                                    <MdCircle className={"text-2xl fill-primary"}/>
+                                    Mgr. Bc. et Bc. Veronika Durasová
+                                </h4>
+                                <p className={"text-lg md:text-2xl text-secondary"}>
+                                    - notářská kandidátka a zástupkyně notářky
+                                </p>
+                                <p className={"text-lg md:text-2xl text-secondary"}>
+                                    - v notářské praxi působí od roku 2016
+                                </p>
+                            </article>
+                        </section>
 
-
-                <div className={"text-center text-xl font-semibold pt-10 md:w-8/12 md:m-auto"}>
-                    Notářská kancelář poskytuje komplexní právní
-                    služby založené na odborných znalostech a
-                    praktických zkušenostech. Setkáte se zde s
-                    profesionálním, ale zároveň vstřícným a
-                    lidským přístupem.
-                </div>
-
-            </section>
+                    </div>
 
 
-            <section className={"md:py-16"}>
+                    <div className={"text-center text-xl font-semibold pt-10 md:w-8/12 md:m-auto"}>
+                        Notářská kancelář poskytuje komplexní právní
+                        služby založené na odborných znalostech a
+                        praktických zkušenostech. Setkáte se zde s
+                        profesionálním, ale zároveň vstřícným a
+                        lidským přístupem.
+                    </div>
+
+                </motion.section>
+            </AnimatePresence>
+
+
+            <section>
                 <div className={"flex justify-center"}>
                     <h2 className={"py-4 bg-primary font-semibold rounded-lg text-2xl sm:text-4xl text-white uppercase w-60 sm:w-72 flex items-center justify-center md:my-8"}>Naše
                         Služby</h2>
@@ -160,7 +178,7 @@ export default function Home() {
             </section>
 
 
-            <section className={"grid grid-cols-12 md:gap-x-10 pb-10"}>
+            <section className={"grid grid-cols-12 md:gap-x-10 pb-10 md:pt-20"}>
                 <div className={"col-span-12 md:col-span-3"}>
                     <div className={"flex py-4"}>
                         <h2 className={"py-4 bg-primary font-semibold rounded-lg text-2xl text-white uppercase w-60 flex items-center justify-center"}>
