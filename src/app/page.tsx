@@ -29,15 +29,15 @@ export default function Home() {
                     <ul className={"flex gap-4  flex-col  md:flex-row text-xl "}>
                         <li className={"w-[12rem]"}>
                             <a className={"w-full uppercase justify-center flex  py-3 bg-primary rounded-lg text-white"}
-                               href="/">Kontakty</a>
+                               href="/#kontakt">Kontakty</a>
                         </li>
                         <li className={"w-[12rem]"}>
                             <a className={"w-full uppercase justify-center flex  py-3 bg-primary rounded-lg text-white"}
-                               href="/">Naše služby</a>
+                               href="/#sluzby">Naše služby</a>
                         </li>
                         <li className={"w-[12rem]"}>
                             <a className={"w-full uppercase justify-center flex  py-3 bg-primary rounded-lg text-white"}
-                               href="/">O nás</a>
+                               href="/#onas">O nás</a>
                         </li>
                     </ul>
                     <img src={"/images/logo.webp"} alt={"main"} width={200} height={200}
@@ -89,6 +89,7 @@ export default function Home() {
             <AnimatePresence>
                 <motion.section initial={{opacity: 0}}
                                 animate={{opacity: 1}}
+                                id={"onas"}
                                 className={"py-10 sm:py-16"}>
                     <div className={"flex justify-center"}>
                         <h2 className={"py-4 bg-primary font-semibold rounded-lg text-2xl sm:text-4xl text-white uppercase w-60 sm:w-72 flex items-center justify-center sm:mt-5"}>O
@@ -161,7 +162,7 @@ export default function Home() {
             </AnimatePresence>
 
 
-            <section>
+            <section id={"sluzby"}>
                 <div className={"flex justify-center"}>
                     <h2 className={"py-4 bg-primary font-semibold rounded-lg text-2xl sm:text-4xl text-white uppercase w-60 sm:w-72 flex items-center justify-center md:my-8"}>Naše
                         Služby</h2>
@@ -178,7 +179,7 @@ export default function Home() {
             </section>
 
 
-            <section className={"grid grid-cols-12 md:gap-x-10 pb-10 md:pt-20"}>
+            <section className={"grid grid-cols-12 md:gap-x-10 pb-10 md:pt-20"} id={"kontakt"}>
                 <div className={"col-span-12 md:col-span-3"}>
                     <div className={"flex py-4"}>
                         <h2 className={"py-4 bg-primary font-semibold rounded-lg text-2xl text-white uppercase w-60 flex items-center justify-center"}>
