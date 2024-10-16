@@ -1,4 +1,4 @@
-import {MdLink, MdTram} from "react-icons/md";
+import {MdLink} from "react-icons/md";
 
 const links = [
     {
