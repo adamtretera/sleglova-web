@@ -1,7 +1,6 @@
 import type {Metadata} from "next";
 import {Forum, EB_Garamond} from 'next/font/google'
 import "./globals.css";
-import {AnimatePresence} from "framer-motion";
 
 
 export const metadata: Metadata = {
