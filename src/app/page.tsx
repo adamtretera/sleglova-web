@@ -1,7 +1,7 @@
 "use client"
 
 import ArticleList from "@/app/articel-list";
-import {AnimatePresence, motion} from "framer-motion";
+import {motion} from "framer-motion";
 
 import {
     MdAccessTime, MdCircle,
