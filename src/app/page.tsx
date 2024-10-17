@@ -79,11 +79,12 @@ export default function Home() {
                         nabídnout vám jasná a srozumitelná řešení.
                     </p>
 
-                    <button
-                        className={"self-center uppercase px-10  py-1 text-lg font-medium bg-primary text-white rounded-lg"}>
+                    <a
+                        href={"mailto:info@notarplzenjih.cz"}
+                        className={"self-center uppercase text-center px-10  py-1 text-lg font-medium bg-primary text-white rounded-lg"}>
                         domluvte si <br/>
                         schůzku
-                    </button>
+                    </a>
                 </motion.div>
                 <div className={"flex w-full justify-end sm:hidden"}>
                     <img src={"/images/logo.webp"} alt={"main"} width={130} height={130}
@@ -220,10 +221,10 @@ export default function Home() {
                     whileInView={{opacity: 1, y: 0}}
                     viewport={{once: true}}
                     transition={{
-                        duration: 0.25,
-                        delay: 0.2
+                        duration: 0.3,
+                        delay: 0.3
                     }}
-                    className={"flex gap-4 self-end  items-center font-medium md:justify-end md:mt-[-6rem] text-xl"}>
+                    className={"flex gap-4 self-end  items-center font-bold md:justify-end md:mt-[-6rem] text-2xl text-secondary"}>
                     <BsExclamationLg
                         className={"flex-shrink-0  text-6xl fill-primary md:text-7xl "}/> Notářská kancelář
                     poskytuje
@@ -235,7 +236,6 @@ export default function Home() {
 
             <motion.section initial={{opacity: 0, y: 50}}
                             whileInView={{opacity: 1, y: 0}}
-                            viewport={{once: true}}
                             transition={{
                                 duration: 0.15,
                                 delay: 0.2
@@ -300,26 +300,30 @@ export default function Home() {
                 </div>
 
                 <div className={"col-span-12 md:col-span-6 py-6 md:px-10 border-x-primary md:border-x-2 border-dashed"}>
-                    <a href={"#"} className={"grid grid-cols-2 gap-8 justify-items-center"}>
-                        <div className={"col-span-2 sm:col-span-1 w-60"}>
-                            <iframe className={"border-0 h-full w-full"}
-                                    src="https://en.frame.mapy.cz/s/hokapehazu"
-                            ></iframe>
-                            <span
-                                className={"text-secondary text-center text-xs"}>2x klikněte na obrázek pro odkázání na mapy.cz</span>
+                    <a target="_blank"
+                       href={"https://en.mapy.cz/zakladni?q=Pra%C5%BEsk%C3%A1%2079%2F5%20&source=addr&id=9072111&ds=1&x=13.3793028&y=49.7483129&z=19"}
+                       className={"grid grid-cols-2 gap-8 justify-items-center"}>
+                        <div className={"col-span-2 sm:col-span-1 w-64"}>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d536.3547289293789!2d13.37912146074416!3d49.7482111208901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470af1e561122d59%3A0xb5f2ecbfaad9f18!2zUHJhxb5za8OhIDc5LzUsIDMwMSAwMCBQbHplxYggMy1Wbml0xZluw60gTcSbc3Rv!5e0!3m2!1sen!2scz!4v1729178303114!5m2!1sen!2scz"
+                                height="200" loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"></iframe>
+
                         </div>
-                        <div className={"col-span-2 sm:col-span-1 w-60"}>
-                            <img src={"/images/office.webp"} className={"w-full object-cover"}/>
+                        <div className={"col-span-2 sm:col-span-1 w-64"}>
+                            <img src={"/images/office.webp"} height={200} className={"w-full object-cover"}/>
                         </div>
 
 
                     </a>
                     <div className={"flex justify-center pt-10"}>
                         <h3 className={"text-2xl text-center md:text-3xl"}>
-                            <span className={"font-semibold"}>Pražská 79/5</span>
                             <div className={"flex gap-4 items-center"}>
                                 <MdLocationPin className={"text-4xl fill-primary"}/>
+
+                                <span className={"font-semibold"}>Pražská 79/5</span>
                                 Vnitřní Město, 301 00 Plzeň
+
                             </div>
                         </h3>
                     </div>
@@ -359,12 +363,15 @@ export default function Home() {
                         stažení</h2>
                     <div className={"py-5"}>
 
-                        <a href={"#"} className={"flex gap-4 items-center text-xl font-medium"} target="_blank"
+                        <a href={"/images/ps.docx"} download={"prebezne-setreni.docx"}
+                           className={"flex gap-4 items-center text-xl font-medium"}
+                           target="_blank"
                            rel="noreferrer">
                             <MdOutlineFileDownload className={"flex-shrink-0 text-4xl fill-primary"}/>
                             <span>formulář k předběžnému šetření</span>
                         </a>
-                        <a href={"#"} className={"flex gap-4 items-center text-xl font-medium"} target="_blank"
+                        <a href={"/images/plna-moc.rtf"} download={"plna-moc.rtf"}
+                           className={"flex gap-4 items-center text-xl font-medium"} target="_blank"
                            rel="noreferrer">
                             <MdOutlineFileDownload className={"flex-shrink-0 text-4xl fill-primary"}/>
                             <span>plná moc</span>

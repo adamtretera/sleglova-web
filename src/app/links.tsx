@@ -23,7 +23,7 @@ const links = [
     },
     {
         label: "OCHRANA OSOBNÍCH ÚDAJŮ",
-        url: "https://example.com/cesky-urad-zememericky"
+        url: "/images/gdpr.pdf"
     }
 ];
 
