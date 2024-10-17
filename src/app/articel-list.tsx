@@ -1,3 +1,4 @@
+import {motion} from "framer-motion";
 import {MdCircle} from "react-icons/md";
 
 const articles = [
@@ -44,12 +45,33 @@ const articles = [
         ]
     }
 ];
+const variants = {
+    visible: (i: number) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: i * 0.3,
+        },
+    }),
+    hidden: {opacity: 0, y: -50},
+}
+
 
 const ArticleList = () => {
     return (
-        <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-12 pt-10"}>
+        <motion.div
+
+            className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-12 pt-10"}>
             {articles.map((article, index) => (
-                <article key={index} className={"flex flex-col gap-4 items-center text-center"}>
+                <motion.article
+                    custom={index}
+                    variants={variants}
+                    initial={"hidden"}
+                    whileInView={"visible"}
+
+
+                    key={index}
+                    className={"flex flex-col gap-4 items-center text-center"}>
                     <img
                         src={article.imgSrc}
                         alt={article.imgAlt}
@@ -63,9 +85,9 @@ const ArticleList = () => {
 
                         </div>
                     ))}
-                </article>
+                </motion.article>
             ))}
-        </div>
+        </motion.div>
     );
 };
 
