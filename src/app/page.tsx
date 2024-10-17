@@ -239,7 +239,7 @@ export default function Home() {
                             transition={{
                                 duration: 0.15,
                                 delay: 0.2
-                            }} className={"grid grid-cols-12 md:gap-x-10 pb-10 md:pt-20"} id={"kontakt"}>
+                            }} className={"grid grid-cols-12 md:gap-x-10 pb-10 pt-10 md:pt-20"} id={"kontakt"}>
                 <div className={"col-span-12 md:col-span-3"}>
                     <div className={"flex py-4"}>
                         <h2 className={"py-4 bg-primary font-semibold rounded-lg text-2xl text-white uppercase w-60 flex items-center justify-center"}>
