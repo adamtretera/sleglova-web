@@ -40,8 +40,8 @@ const articles = [
         imgAlt: "Dědické právo",
         title: "Dědické právo",
         content: [
-            "Závěti, dědické smlouvy a jiná pořízení",
-            "Pozůstalostní řízení a jiná pořízení pro případ smrti"
+            "Závěti, dědické smlouvy a jiná pořízení pro případ smrti",
+            "Pozůstalostní řízení"
         ]
     }
 ];

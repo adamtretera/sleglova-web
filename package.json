@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:ftp": "next build && node uploadToFtp.js"
   },
   "dependencies": {
+    "basic-ftp": "^5.0.5",
     "framer-motion": "^11.11.9",
     "next": "14.2.15",
     "react": "^18",
