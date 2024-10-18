@@ -319,8 +319,8 @@ export default function Home() {
                     </a>
                     <div className={"flex justify-center pt-10"}>
                         <h3 className={"text-2xl text-center"}>
-                            <div className={"flex gap-4 items-center"}>
-                                <MdLocationPin className={"text-4xl fill-primary font-semibold"}/>
+                            <div className={"flex gap-4 items-center font-semibold"}>
+                                <MdLocationPin className={"text-4xl fill-primary "}/>
                                 Pražská 79/5, Vnitřní Město, 301 00 Plzeň
                             </div>
                         </h3>
