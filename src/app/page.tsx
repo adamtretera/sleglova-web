@@ -15,7 +15,12 @@ import {BsExclamationLg} from "react-icons/bs";
 
 import {Links} from "@/app/links";
 
+const isMobileDevice = () => typeof window !== 'undefined' && window.innerWidth < 768;
+
+
 export default function Home() {
+    const isMobile = isMobileDevice(); // Check if it's mobile
+
     return (
         <div className={"px-10 md:px-2 md:container m-auto"}>
             <header>
@@ -55,7 +60,7 @@ export default function Home() {
                             }}
                             className={"grid grid-cols-1 md:grid-cols-2 gap-4 md:justify-items-center md:min-h-[60vh]"}>
 
-                <motion.div initial={{opacity: 0, x: -100}}
+                <motion.div initial={{opacity: 0, x: isMobile ? 0 : -100}}
                             whileInView={{opacity: 1, x: 0}}
                             transition={{
                                 duration: 0.25,
@@ -90,7 +95,7 @@ export default function Home() {
                     <img src={"/images/logo.webp"} alt={"main"} width={130} height={130}
                          className={"max-w-full col-span-1 "}/>
                 </div>
-                <motion.img initial={{opacity: 0, x: 100}}
+                <motion.img initial={{opacity: 0, x: isMobile ? 0 : 100}}
                             whileInView={{opacity: 1, x: 0}}
                             transition={{
                                 duration: 0.25,
@@ -116,7 +121,7 @@ export default function Home() {
 
                 <div className={"grid grid-cols-1 sm:grid-cols-10 gap-4 md:py-5"}>
 
-                    <motion.article initial={{opacity: 0, x: -100}}
+                    <motion.article initial={{opacity: 0, x: isMobile ? 0 : -100}}
                                     whileInView={{opacity: 1, x: 0}}
                                     viewport={{once: true}}
                                     transition={{
@@ -143,7 +148,7 @@ export default function Home() {
                     </motion.article>
 
                     <motion.section
-                        initial={{opacity: 0, x: 100}}
+                        initial={{opacity: 0, x: isMobile ? 0 : 100}}
                         whileInView={{opacity: 1, x: 0}}
                         viewport={{once: true}}
                         transition={{
