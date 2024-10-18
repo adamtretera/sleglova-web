@@ -3,23 +3,23 @@ import {MdLink} from "react-icons/md";
 const links = [
     {
         label: "NOTÁŘSKÝ TARIF",
-        url: "https://example.com/notarsky-tarif"
+        url: "https://www.zakonyprolidi.cz/cs/2001-196"
     },
     {
         label: "NOTÁŘSKÁ KOMORA ČESKÉ REPUBLIKY",
-        url: "https://example.com/notarska-komora"
+        url: "https://www.nkcr.cz/"
     },
     {
         label: "JUSTICE",
-        url: "https://example.com/justice"
+        url: "https://justice.cz"
     },
     {
         label: "EVIDENCE SKUTEČNÝCH",
-        url: "https://example.com/evidence-skutecnych"
+        url: "https://esm.justice.cz/ias/issm/rejstrik-sm.vysledky?subjektId=198517&typ=PLATNY_CASTECNY_SM"
     },
     {
         label: "ČESKÝ ÚŘAD ZEMĚMĚŘICKÝ A KATASTRÁLNÍ",
-        url: "https://example.com/cesky-urad-zememericky"
+        url: "https://cuzk.gov.cz/"
     },
     {
         label: "OCHRANA OSOBNÍCH ÚDAJŮ",

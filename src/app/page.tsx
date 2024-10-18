@@ -320,10 +320,8 @@ export default function Home() {
                     <div className={"flex justify-center pt-10"}>
                         <h3 className={"text-2xl text-center"}>
                             <div className={"flex gap-4 items-center"}>
-                                <MdLocationPin className={"text-4xl fill-primary"}/>
-
-                                <span className={"font-semibold"}>Pražská 79/5</span>
-                                Vnitřní Město, 301 00 Plzeň
+                                <MdLocationPin className={"text-4xl fill-primary font-semibold"}/>
+                                Pražská 79/5, Vnitřní Město, 301 00 Plzeň
                             </div>
                         </h3>
                     </div>
