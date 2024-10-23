@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import {MdCircle} from "react-icons/md";
+import ArticleCard from "@/app/article-card";
 
 const articles = [
     {
@@ -52,8 +52,12 @@ const variants = {
         transition: {
             delay: i * 0.3,
         },
+
     }),
+
+
     hidden: {opacity: 0, y: -50},
+
 }
 
 
@@ -61,31 +65,38 @@ const ArticleList = () => {
     return (
         <motion.div
 
-            className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-12 pt-10"}>
+            className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4  pt-5"}>
             {articles.map((article, index) => (
-                <motion.article
-                    custom={index}
-                    variants={variants}
-                    initial={"hidden"}
-                    whileInView={"visible"}
+                <motion.div key={article.title} custom={index}
+                            variants={variants}
+                            viewport={{once: true}}
+
+                            initial={"hidden"}
+                            whileInView={"visible"}>
+
+                    <ArticleCard key={index} image={article.imgSrc} imageAlt={article.imgAlt} title={article.title}
+                                 content={article.content}/>
+                </motion.div>
 
 
-                    key={index}
-                    className={"flex flex-col gap-4 items-center text-center"}>
-                    <img
-                        src={article.imgSrc}
-                        alt={article.imgAlt}
-                        className={"object-cover h-48 w-48 md:w-56 md:h-56 opacity-80 bg-blend-lighten"}
-                    />
-                    <h4 className={"text-3xl text-secondary font-semibold md:min-h-[5rem]"}>{article.title}</h4>
-                    {article.content.map((paragraph, i) => (
-                        <div key={paragraph} className={"flex gap-2 w-full"}>
-                            <MdCircle className={"text-sm flex-shrink-0 fill-primary"}/>
-                            <p className={" text-start"} key={i}>{paragraph}</p>
 
-                        </div>
-                    ))}
-                </motion.article>
+
+
+                //     className={"flex flex-col gap-4 items-center text-center"}>
+                //     <img
+                //         src={article.imgSrc}
+                //         alt={article.imgAlt}
+                //         className={"object-cover h-48 w-48 md:w-56 md:h-56 opacity-80 bg-blend-lighten"}
+                //     />
+                //     <h4 className={"text-3xl text-secondary font-semibold md:min-h-[5rem]"}>{article.title}</h4>
+                //     {article.content.map((paragraph, i) => (
+                //         <div key={paragraph} className={"flex gap-2 w-full"}>
+                //             <MdCircle className={"text-sm flex-shrink-0 fill-primary"}/>
+                //             <p className={" text-start"} key={i}>{paragraph}</p>
+                //
+                //         </div>
+                //     ))}
+                // </motion.article>
             ))}
         </motion.div>
     );

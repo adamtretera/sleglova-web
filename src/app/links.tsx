@@ -14,7 +14,7 @@ const links = [
         url: "https://justice.cz"
     },
     {
-        label: "EVIDENCE SKUTEČNÝCH",
+        label: "EVIDENCE SKUTEČNÝCH MAJITELŮ",
         url: "https://esm.justice.cz/ias/issm/rejstrik-sm.vysledky?subjektId=198517&typ=PLATNY_CASTECNY_SM"
     },
     {
@@ -32,7 +32,7 @@ export function Links() {
         <ul className={"py-5"}>
             {links.map(link => (
                 <li key={link.url}>
-                    <a href={link.url} className={"flex gap-4 items-center text-lg font-medium"} target="_blank"
+                    <a href={link.url} className={"flex gap-4 text-lg font-medium"} target="_blank"
                        rel="noreferrer">
                         <MdLink className={"flex-shrink-0 text-4xl fill-primary"}/>
                         <span>{link.label}</span>

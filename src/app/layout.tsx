@@ -27,7 +27,7 @@ export default function RootLayout({
     return (
         <html lang="cs">
         <body
-            className={`${garamond.variable} ${forum.variable} font-mono`}
+            className={`${garamond.variable} ${forum.variable} font-sans`}
         >
 
         {children}

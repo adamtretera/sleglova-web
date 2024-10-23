@@ -11,7 +11,6 @@ import {
     MdMail,
     MdOutlineAlternateEmail, MdOutlineFileDownload, MdOutlineInfo, MdTram
 } from "react-icons/md";
-import {BsExclamationLg} from "react-icons/bs";
 
 import {Links} from "@/app/links";
 
@@ -33,20 +32,20 @@ export default function Home() {
                             className={"pt-10 sm:pt-5 flex justify-center md:justify-between mb-10 md:mb-2"}>
                     <ul className={"flex gap-4  flex-col  md:flex-row text-xl "}>
                         <li className={"w-[12rem]"}>
-                            <a className={"w-full uppercase justify-center flex  py-3 bg-primary rounded-lg text-white"}
+                            <a className={"w-full uppercase justify-center flex hover:scale-95 hover:opacity-85  py-3 bg-primary rounded-lg text-white"}
                                href="/#kontakt">Kontakty</a>
                         </li>
                         <li className={"w-[12rem]"}>
-                            <a className={"w-full uppercase justify-center flex  py-3 bg-primary rounded-lg text-white"}
+                            <a className={"w-full uppercase justify-center flex hover:scale-95 hover:opacity-85  py-3 bg-primary rounded-lg text-white"}
                                href="/#sluzby">Naše služby</a>
                         </li>
                         <li className={"w-[12rem]"}>
-                            <a className={"w-full uppercase justify-center flex  py-3 bg-primary rounded-lg text-white"}
+                            <a className={"w-full uppercase justify-center flex hover:scale-95 hover:opacity-85 transition py-3 bg-primary rounded-lg text-white"}
                                href="/#onas">O nás</a>
                         </li>
                     </ul>
                     <img src={"/images/logo.webp"} alt={"main"} width={200} height={200}
-                         className={"max-w-full col-span-1 hidden md:block"}/>
+                         className={"max-w-full col-span-1  hidden md:block"}/>
 
                 </motion.nav>
 
@@ -58,15 +57,16 @@ export default function Home() {
                                 duration: 0.25,
                                 delay: 0.2
                             }}
-                            className={"grid grid-cols-1 md:grid-cols-2 gap-4 md:justify-items-center md:min-h-[60vh]"}>
+                            className={"grid grid-cols-1 md:grid-cols-2 gap-4 sm:justify-items-center sm:items-center md:min-h-[60vh]"}>
 
                 <motion.div initial={{opacity: 0, x: isMobile ? 0 : -100}}
                             whileInView={{opacity: 1, x: 0}}
                             transition={{
                                 duration: 0.25,
                                 delay: 0.2
-                            }} className={"flex flex-col col-span-1 gap-10 items-center justify-center  sm:px-16"}>
-                    <h1 className={"text-4xl sm:text-5xl font-sans text-center"}>
+                            }}
+                            className={"flex flex-col col-span-1 gap-10 items-center sm:items-start justify-center  sm:p-r-16"}>
+                    <h1 className={"text-4xl sm:text-5xl font-sans text-center sm:text-left"}>
                         <div>
                             Notářská kancelář
                         </div>
@@ -78,7 +78,7 @@ export default function Home() {
                         </div>
                     </h1>
 
-                    <p className={"text-center text-xl"}>
+                    <p className={"text-center text-xl sm:text-left text-secondary"}>
                         Zkušený pracovní kolektiv je připraven vám
                         naslouchat, vyhodnotit vaše potřeby, požadavky a
                         nabídnout vám jasná a srozumitelná řešení.
@@ -86,7 +86,7 @@ export default function Home() {
 
                     <a
                         href={"mailto:info@notarplzenjih.cz"}
-                        className={"self-center uppercase text-center px-10  py-1 text-lg font-medium bg-primary text-white rounded-lg"}>
+                        className={"self-center sm:self-start hover:scale-95 hover:opacity-85 uppercase text-center px-10  py-1 text-lg font-medium bg-primary text-white rounded-lg"}>
                         domluvte si <br/>
                         schůzku
                     </a>
@@ -100,7 +100,7 @@ export default function Home() {
                             transition={{
                                 duration: 0.25,
                                 delay: 0.2
-                            }} src={"/images/main.webp"} alt={"main"} className={"max-w-full col-span-1"}/>
+                            }} src={"/images/main.webp"} alt={"main"} className={"max-w-full col-span-1 rounded-md"}/>
             </motion.section>
 
             <section
@@ -119,7 +119,7 @@ export default function Home() {
                         nás</h2>
                 </motion.div>
 
-                <div className={"grid grid-cols-1 sm:grid-cols-10 gap-4 md:py-5"}>
+                <div className={"grid grid-cols-1 sm:grid-cols-10 justify-between gap-4 md:py-5"}>
 
                     <motion.article initial={{opacity: 0, x: isMobile ? 0 : -100}}
                                     whileInView={{opacity: 1, x: 0}}
@@ -128,13 +128,14 @@ export default function Home() {
                                         duration: 0.25,
                                         delay: 0.2
                                     }}
-                                    className={"md:flex items-center py-5 sm:gap-10 col-span-10 sm:col-span-6 "}>
-                        <img src={"/images/headshot.webp"} width={180}/>
+
+                                    className={"md:flex items-center py-5 sm:gap-10 col-span-10 sm:col-span-6  rounded-md border-solid"}>
+                        <img src={"/images/headshot.webp"} className={"rounded-md"} width={180}/>
                         <div>
-                            <h3 className={"underline text-2xl md:text-3xl font-semibold pt-5"}>
+                            <h3 className={"text-2xl md:text-3xl font-semibold pt-5"}>
                                 JUDr. Kateřina Šleglová, notářka
                             </h3>
-                            <p className={"text-2xl pt-4 tracking-wide text-secondary"}>
+                            <p className={"text-xl pt-4 tracking-wide text-secondary"}>
                                 JUDr. Kateřina Šleglová vystudovala Právnickou fakultu
                                 Univerzity Karlovy v Praze. Notářskou praxi zahájila v
                                 roce 2016. Většinu této praxe absolvovala v kanceláři
@@ -155,30 +156,30 @@ export default function Home() {
                             duration: 0.25,
                             delay: 0.2
                         }}
-                        className={"col-span-10 sm:col-span-4 flex flex-col justify-between py-5 gap-10 sm:min-h-[30vh] items-center"}>
-                        <article className={"text-center"}>
-                            <h4 className={"text-xl md:text-2xl font-semibold flex gap-2 sm:pb-3 items-center"}>
+                        className={"col-span-10 sm:col-span-4 flex flex-col justify-between py-5 gap-10 sm:min-h-[30vh] md:pl-16 items-start"}>
+                        <article className={"text-center sm:text-left"}>
+                            <h4 className={"text-xl md:text-2xl font-semibold flex gap-2 sm:pb-3 items-center sm:items-start"}>
                                 <MdCircle className={"text-2xl fill-primary"}/>
                                 Mgr. Bc. et Bc. Veronika Durasová
                             </h4>
-                            <p className={"text-lg md:text-2xl text-secondary"}>
+                            <p className={"text-lg md:text-xl text-secondary"}>
                                 - notářská kandidátka a zástupkyně notářky
                             </p>
-                            <p className={"text-lg md:text-2xl text-secondary"}>
+                            <p className={"text-lg md:text-xl text-secondary"}>
                                 - v notářské praxi působí od roku 2016
                             </p>
                         </article>
 
-                        <article className={"text-center"}>
+                        <article className={"text-center sm:text-left"}>
 
-                            <h4 className={"text-xl md:text-2xl font-semibold flex gap-2 sm:pb-3 items-center"}>
+                            <h4 className={"text-xl md:text-2xl font-semibold flex gap-2 sm:pb-3 items-center sm:items-start"}>
                                 <MdCircle className={"text-2xl fill-primary"}/>
                                 Mgr. Radka Matoušů
                             </h4>
-                            <p className={"text-lg md:text-2xl text-secondary"}>
+                            <p className={"text-lg md:text-xl text-secondary"}>
                                 - notářská tajemnice
                             </p>
-                            <p className={"text-lg md:text-2xl text-secondary"}>
+                            <p className={"text-lg md:text-xl text-secondary"}>
                                 - v notářské praxi působí od roku 2011
                             </p>
                         </article>
@@ -195,7 +196,7 @@ export default function Home() {
                         duration: 0.25,
                         delay: 0.2
                     }}
-                    className={"text-center text-xl font-semibold pt-10 md:w-8/12 md:m-auto"}>
+                    className={"text-center  text-xl font-semibold pt-10 md:w-8/12 md:m-auto"}>
                     Notářská kancelář poskytuje komplexní právní
                     služby založené na odborných znalostech a
                     praktických zkušenostech. Setkáte se zde s
@@ -229,9 +230,8 @@ export default function Home() {
                         duration: 0.3,
                         delay: 0.3
                     }}
-                    className={"flex gap-4 self-end  items-center font-bold md:justify-end md:mt-[-6rem] text-2xl text-secondary"}>
-                    <BsExclamationLg
-                        className={"flex-shrink-0  text-6xl fill-primary md:text-7xl "}/> Notářská kancelář
+                    className={"text-center  text-xl font-semibold pt-10 md:w-8/12 md:m-auto"}>
+                    Notářská kancelář
                     poskytuje
                     služby rovněž v
                     německém a anglickém jazyce.
@@ -304,7 +304,7 @@ export default function Home() {
                     </section>
                 </div>
 
-                <div className={"col-span-12 md:col-span-6 py-6 md:px-10 border-x-primary md:border-x-2 border-dashed"}>
+                <div className={"col-span-12 md:col-span-6 py-6 md:px-10 "}>
                     <a target="_blank"
                        href={"https://en.mapy.cz/zakladni?q=Pra%C5%BEsk%C3%A1%2079%2F5%20&source=addr&id=9072111&ds=1&x=13.3793028&y=49.7483129&z=19"}
                        className={"grid grid-cols-2 gap-8 justify-items-center"}>
@@ -312,27 +312,33 @@ export default function Home() {
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d536.3547289293789!2d13.37912146074416!3d49.7482111208901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470af1e561122d59%3A0xb5f2ecbfaad9f18!2zUHJhxb5za8OhIDc5LzUsIDMwMSAwMCBQbHplxYggMy1Wbml0xZluw60gTcSbc3Rv!5e0!3m2!1sen!2scz!4v1729178303114!5m2!1sen!2scz"
                                 height="200"
-                                className={"w-full"} loading="lazy"
+                                className={"w-full rounded-md"} loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
 
                         </div>
                         <div className={"col-span-2 sm:col-span-1 w-full md:w-64"}>
-                            <img src={"/images/office.webp"} height={200} className={"w-full object-cover"}/>
+                            <img src={"/images/office.webp"} height={200} className={"w-full object-cover rounded-md"}/>
                         </div>
 
 
                     </a>
-                    <div className={"flex justify-center pt-10"}>
-                        <h3 className={"text-2xl text-center"}>
-                            <div className={"flex gap-4 items-center font-semibold"}>
-                                <MdLocationPin className={"text-4xl fill-primary "}/>
-                                Pražská 79/5, Vnitřní Město, 301 00 Plzeň
+                    <div className={"flex pt-10"}>
+                        <h3 className={"text-2xl "}>
+                            <div className={"flex gap-4  font-semibold"}>
+                                <MdLocationPin className={"text-4xl flex-shrink-0 fill-primary "}/>
+                                <div>
+                                    Pražská 79/5, Vnitřní Město, 301 00 Plzeň
+
+                                    <p className={"md:py-3 font-medium text-lg "}>
+                                        Kancelář se nachází v prvním patře domu, který je bezprostředně u náměstí
+                                        Republiky.
+                                    </p>
+                                </div>
+
                             </div>
                         </h3>
                     </div>
-                    <p className={"md:py-3 font-medium text-center text-secondary"}>
-                        Kancelář se nachází v prvním patře domu, který je bezprostředně u náměstí Republiky.
-                    </p>
+
 
                     <div className={"flex justify-center pt-10"}>
                         <h3 className={"text-lg"}>
