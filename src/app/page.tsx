@@ -206,21 +206,7 @@ export default function Home() {
                 </motion.div>
                 <ArticleList/>
 
-                <motion.p
-                    initial={{opacity: 0, y: 100}}
-                    whileInView={{opacity: 1, y: 0}}
-                    viewport={{once: true}}
-                    transition={{
-                        duration: 0.3,
-                        delay: 0.3
-                    }}
-                    className={"text-center items-center flex gap-4  text-xl font-semibold pt-10 md:w-8/12 md:m-auto"}>
-                    <MdOutlineInfo className={"flex-shrink-0 text-4xl fill-primary"}/>
-                    Notářská kancelář
-                    poskytuje
-                    služby rovněž v
-                    německém a anglickém jazyce.
-                </motion.p>
+         
             </section>
 
 

@@ -26,6 +26,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="cs">
+        <head>
+            <meta name="seznam-wmt" content="8424jeStfSgDYgoPtTXJL6BlGRkYaOGQ"/>
+
+        </head>
         <body
             className={`${garamond.variable} ${forum.variable} font-sans`}
         >

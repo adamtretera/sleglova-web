@@ -1,5 +1,6 @@
 import {motion} from "framer-motion";
 import ArticleCard from "@/app/article-card";
+import {MdOutlineInfo} from "react-icons/md";
 
 const articles = [
     {
@@ -63,42 +64,45 @@ const variants = {
 
 const ArticleList = () => {
     return (
-        <motion.div
-
-            className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4  pt-5"}>
-            {articles.map((article, index) => (
-                <motion.div key={article.title} custom={index}
-                            variants={variants}
-                            viewport={{once: true}}
-
-                            initial={"hidden"}
-                            whileInView={"visible"}>
-
-                    <ArticleCard key={index} image={article.imgSrc} imageAlt={article.imgAlt} title={article.title}
-                                 content={article.content}/>
-                </motion.div>
+        <div>
 
 
+            <motion.div
+
+                className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4  pt-5"}>
+                {articles.map((article, index) => (
+                    <motion.div key={article.title} custom={index}
+                                variants={variants}
+                                viewport={{once: true}}
+
+                                initial={"hidden"}
+                                whileInView={"visible"}>
+
+                        <ArticleCard key={index} image={article.imgSrc} imageAlt={article.imgAlt} title={article.title}
+                                     content={article.content}/>
+                    </motion.div>
 
 
+                ))}
 
-                //     className={"flex flex-col gap-4 items-center text-center"}>
-                //     <img
-                //         src={article.imgSrc}
-                //         alt={article.imgAlt}
-                //         className={"object-cover h-48 w-48 md:w-56 md:h-56 opacity-80 bg-blend-lighten"}
-                //     />
-                //     <h4 className={"text-3xl text-secondary font-semibold md:min-h-[5rem]"}>{article.title}</h4>
-                //     {article.content.map((paragraph, i) => (
-                //         <div key={paragraph} className={"flex gap-2 w-full"}>
-                //             <MdCircle className={"text-sm flex-shrink-0 fill-primary"}/>
-                //             <p className={" text-start"} key={i}>{paragraph}</p>
-                //
-                //         </div>
-                //     ))}
-                // </motion.article>
-            ))}
-        </motion.div>
+
+            </motion.div>
+            <motion.p
+                initial={{opacity: 0, y: 100}}
+                whileInView={{opacity: 1, y: 0}}
+                viewport={{once: true}}
+                transition={{
+                    duration: 0.3,
+                    delay: 0.3
+                }}
+                className={"items-center flex gap-4  text-xl font-semibold pt-10  md:m-auto"}>
+                <MdOutlineInfo className={"flex-shrink-0 text-4xl fill-primary"}/>
+                Notářská kancelář
+                poskytuje
+                služby rovněž v
+                německém a anglickém jazyce.
+            </motion.p>
+        </div>
     );
 };
 
