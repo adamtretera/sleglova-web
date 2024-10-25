@@ -29,8 +29,24 @@ export default function RootLayout({
         <body
             className={`${garamond.variable} ${forum.variable} font-sans`}
         >
+        <div className="relative min-h-screen">
 
-        {children}
+
+            <div
+                className="fixed inset-0 bg-cover bg-center z-0 "
+                style={{
+                    backgroundImage: "url('/images/logo.webp')",
+                    backgroundSize: "40%",
+                    backgroundRepeat: "no-repeat",
+                }}
+            >
+                <div className="absolute inset-0 bg-white bg-opacity-85"></div>
+            </div>
+
+            <div className="relative z-10">
+                {children}
+            </div>
+        </div>
         </body>
         </html>
     );

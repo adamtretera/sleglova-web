@@ -105,7 +105,7 @@ export default function Home() {
 
             <section
                 id={"onas"}
-                className={"py-10 sm:py-16 md:min-h-[80vh]"}>
+                className={"py-10 sm:py-12 md:min-h-[60vh] flex flex-col items-center justify-center"}>
                 <motion.div
                     initial={{opacity: 0, y: 100}}
                     whileInView={{opacity: 1, y: 0}}
@@ -188,22 +188,6 @@ export default function Home() {
                 </div>
 
 
-                <motion.div
-                    initial={{opacity: 0, y: -100}}
-                    whileInView={{opacity: 1, y: 0}}
-                    viewport={{once: true}}
-                    transition={{
-                        duration: 0.25,
-                        delay: 0.2
-                    }}
-                    className={"text-center  text-xl font-semibold pt-10 md:w-8/12 md:m-auto"}>
-                    Notářská kancelář poskytuje komplexní právní
-                    služby založené na odborných znalostech a
-                    praktických zkušenostech. Setkáte se zde s
-                    profesionálním, ale zároveň vstřícným a
-                    lidským přístupem.
-                </motion.div>
-
             </section>
 
 
@@ -230,7 +214,8 @@ export default function Home() {
                         duration: 0.3,
                         delay: 0.3
                     }}
-                    className={"text-center  text-xl font-semibold pt-10 md:w-8/12 md:m-auto"}>
+                    className={"text-center items-center flex gap-4  text-xl font-semibold pt-10 md:w-8/12 md:m-auto"}>
+                    <MdOutlineInfo className={"flex-shrink-0 text-4xl fill-primary"}/>
                     Notářská kancelář
                     poskytuje
                     služby rovněž v
@@ -253,9 +238,9 @@ export default function Home() {
                     <section className={"flex flex-col  justify-center gap-4"}>
                         <div className={"flex items-center  gap-4"}>
                             <MdLocalPhone className={"text-4xl  fill-primary"}/>
-                            <span className={"text-xl font-semibold"}>
+                            <a href="tel:+420734843974" className={"text-xl font-semibold"}>
                                 +420 734 843 974
-                            </span>
+                            </a>
                         </div>
                         <div className={"flex  items-center gap-4 "}>
                             <MdOutlineAlternateEmail className={"text-4xl fill-primary"}/>
@@ -340,7 +325,7 @@ export default function Home() {
                     </div>
 
 
-                    <div className={"flex justify-center pt-10"}>
+                    <div className={"flex justify-start  pt-10"}>
                         <h3 className={"text-lg"}>
                             <div className={"flex gap-4 items-center"}>
                                 <MdLocalParking className={"flex-shrink-0 text-4xl fill-primary"}/>

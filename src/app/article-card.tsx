@@ -39,7 +39,11 @@ export default function ArticleCard({title, content, image, imageAlt}: ArticleCa
                 }`}/>
 
             <section
-                className="absolute inset-0 flex flex-col justify-end text-primary-foreground   ">
+
+                className={`absolute inset-0 flex flex-col justify-start text-primary-foreground ${
+                    isHovered ? 'justify-start' : 'justify-end'
+                }`}
+            >
                 <div
                     className={`transition-all duration-300 ease-in-out min-h-28 ${
                         isHovered ? 'bg-transparent p-4' : 'bg-background opacity-85 p-4'

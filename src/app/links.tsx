@@ -15,7 +15,7 @@ const links = [
     },
     {
         label: "EVIDENCE SKUTEČNÝCH MAJITELŮ",
-        url: "https://esm.justice.cz/ias/issm/rejstrik-sm.vysledky?subjektId=198517&typ=PLATNY_CASTECNY_SM"
+        url: "https://esm.justice.cz/ias/issm/rejstrik"
     },
     {
         label: "ČESKÝ ÚŘAD ZEMĚMĚŘICKÝ A KATASTRÁLNÍ",
